@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pedro Rojas Consulting · Infraestructura para certificación, MRV y créditos de carbono</title>
+<meta name="description" content="Consultoría independiente para empresas en certificación FSC, créditos de carbono y sustentabilidad. Trazabilidad, cadena de custodia, automatización de auditorías y reporting MRV con IA.">
+<meta name="theme-color" content="#0e2018">
+<meta property="og:title" content="Pedro Rojas Consulting">
+<meta property="og:description" content="Infraestructura operativa con IA para certificación, MRV y créditos de carbono.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0e2018;
+  --bg-2: #142a20;
+  --panel: #16332550;
+  --line: #1f4332;
+  --ink: #f3ecdc;
+  --ink-dim: #c9c0a8;
+  --ink-mute: #8a9588;
+  --accent: #d7a85a;
+  --accent-2: #7fb38a;
+  --max: 1080px;
+  --radius: 14px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-image:
+    radial-gradient(1200px 600px at 80% -20%, rgba(215,168,90,0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(127,179,138,0.08), transparent 60%);
+}
+.wrap { max-width: var(--max); margin: 0 auto; padding: 32px 22px 80px; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding-bottom: 28px; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: 'Fraunces', serif; font-weight: 500; font-size: 18px; letter-spacing: -0.01em; }
+.brand-mark {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  box-shadow: 0 0 0 4px rgba(215,168,90,0.10);
+}
+.nav-meta { color: var(--ink-mute); font-size: 13px; }
+
+.hero { padding: 56px 0 36px; }
+.kicker {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 6px 12px;
+  border: 1px solid rgba(215,168,90,0.35);
+  border-radius: 999px;
+  margin-bottom: 22px;
+}
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(34px, 6vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 0 0 22px;
+}
+h1 em { font-style: italic; color: var(--accent-2); font-weight: 400; }
+.lede {
+  font-size: clamp(17px, 2.2vw, 20px);
+  color: var(--ink-dim);
+  max-width: 680px;
+  margin: 0 0 30px;
+}
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform 120ms ease, background 120ms ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary {
+  background: var(--accent);
+  color: #1a1208;
+}
+.btn-primary:hover { background: #e1b76b; }
+.btn-ghost {
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: transparent;
+}
+.btn-ghost:hover { border-color: var(--ink-mute); background: rgba(255,255,255,0.03); }
+
+.section { padding: 48px 0 12px; }
+.section-label {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 14px;
+}
+.section h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(26px, 3.6vw, 36px);
+  letter-spacing: -0.015em;
+  margin: 0 0 32px;
+  max-width: 720px;
+  line-height: 1.15;
+}
+
+.services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.service {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+.service:hover { border-color: rgba(215,168,90,0.45); transform: translateY(-2px); }
+.service-num {
+  font-family: 'Fraunces', serif;
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+.service h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+.service p { margin: 0; font-size: 14.5px; color: var(--ink-dim); line-height: 1.55; }
+.service-for {
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--ink-mute);
+  border-top: 1px dashed var(--line);
+  padding-top: 12px;
+}
+
+.casos {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+}
+.caso {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.caso-name { font-family: 'Fraunces', serif; font-size: 17px; margin-bottom: 4px; }
+.caso-desc { font-size: 13px; color: var(--ink-mute); line-height: 1.45; }
+
+.bio {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 12px;
+  align-items: start;
+}
+.bio-block {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.bio-block h4 {
+  font-family: 'Fraunces', serif; font-weight: 500;
+  margin: 0 0 10px; font-size: 16px; color: var(--accent);
+  letter-spacing: 0.02em;
+}
+.bio-block p { margin: 0; font-size: 14.5px; color: var(--ink-dim); }
+.bio-block ul { margin: 0; padding-left: 18px; font-size: 14.5px; color: var(--ink-dim); }
+.bio-block li { margin-bottom: 4px; }
+
+.contact {
+  margin-top: 56px;
+  background: linear-gradient(135deg, #163224 0%, #1a3a2a 100%);
+  border: 1px solid rgba(215,168,90,0.25);
+  border-radius: 18px;
+  padding: 36px 32px;
+}
+.contact h2 { margin-top: 0; }
+.contact .lede { margin-bottom: 24px; }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+.contact-card {
+  background: rgba(0,0,0,0.18);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 160ms ease;
+}
+.contact-card:hover { border-color: var(--accent); }
+.contact-card .label { font-size: 12px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px; }
+.contact-card .value { font-size: 15px; color: var(--ink); word-break: break-all; }
+
+footer {
+  margin-top: 64px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-mute);
+  font-size: 12.5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 720px) {
+  .services { grid-template-columns: 1fr; }
+  .casos { grid-template-columns: repeat(2, 1fr); }
+  .bio { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .nav-meta { display: none; }
+  .wrap { padding: 22px 18px 60px; }
+  .hero { padding: 36px 0 24px; }
+  .contact { padding: 26px 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="nav">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Pedro Rojas Consulting</span>
+    </div>
+    <div class="nav-meta">FSC · Ecocert · 21 mayo 2026</div>
+  </header>
+
+  <section class="hero">
+    <span class="kicker">Consultoría independiente</span>
+    <h1>Infraestructura operativa para empresas que <em>certifican, miden y reportan</em>.</h1>
+    <p class="lede">Trazabilidad, cadena de custodia, evidencia de auditoría y reporting MRV con IA. Para que tu certificación no viva en hojas de cálculo y carpetas compartidas.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:pedro.rojas.campuzano@gmail.com?subject=Conversación%20de%2030%20min%20%C2%B7%20FSC%2FEcocert">Agendar 30 min</a>
+      <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+    </div>
+  </section>
+
+  <section class="section" id="servicios">
+    <div class="section-label">Qué construyo</div>
+    <h2>Infraestructura operativa, no PowerPoints.</h2>
+    <div class="services">
+
+      <div class="service">
+        <div class="service-num">01</div>
+        <h3>Trazabilidad y cadena de custodia</h3>
+        <p>Sistema único donde la evidencia de origen, lote y transformación viaja con el producto. Sin Excel paralelos, sin foto perdida en WhatsApp.</p>
+        <div class="service-for">Para: empresas con certificación FSC, Rainforest Alliance, Bonsucro, orgánicos.</div>
+      </div>
+
+      <div class="service">
+        <div class="service-num">02</div>
+        <h3>Automatización de auditorías</h3>
+        <p>IA que procesa los documentos, formatos y fotos de la auditoría, organiza el paquete y deja preparada la visita. Lo que toma 3 semanas de tu equipo, en horas.</p>
+        <div class="service-for">Para: empresas con auditoría anual recurrente y equipos pequeños.</div>
+      </div>
+
+      <div class="service">
+        <div class="service-num">03</div>
+        <h3>Reporting MRV y créditos de carbono</h3>
+        <p>Infraestructura de monitoreo, reporte y verificación con datos consistentes para registros (Verra, Gold Standard, CAR). Mismo motor que tu reporting financiero, pero para tCO₂e.</p>
+        <div class="service-for">Para: project developers, agroforestales, empresas con compromisos net zero.</div>
+      </div>
+
+      <div class="service">
+        <div class="service-num">04</div>
+        <h3>Base operativa con Notion + IA</h3>
+        <p>Diseño tu base operativa donde viven proyectos, clientes, evidencia y reportes. Notion como núcleo, IA donde aporta de verdad, integraciones donde hace falta.</p>
+        <div class="service-for">Para: empresas que viven en correo, Drive sin estructura y juntas que no convergen.</div>
+      </div>
+
+      <div class="service">
+        <div class="service-num">05</div>
+        <h3>Modelos financieros y business case</h3>
+        <p>Unit economics y modelos financieros para entrar a mercados de certificación, créditos o nuevos servicios. Lectura de ex-M&A sobre tu negocio.</p>
+        <div class="service-for">Para: equipos que necesitan defender una inversión, una ronda o un pivote.</div>
+      </div>
+
+      <div class="service">
+        <div class="service-num">06</div>
+        <h3>Diagnóstico y roadmap operativo</h3>
+        <p>Dos semanas, una conversación honesta con tu equipo, un documento accionable. Qué automatizar primero, qué dejar manual, qué construir y qué comprar.</p>
+        <div class="service-for">Para: empresas que sienten el caos operativo pero no saben por dónde empezar.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Quién me ha contratado</div>
+    <h2>Trabajo con equipos en sustentabilidad, regeneración y finanzas.</h2>
+    <div class="casos">
+      <div class="caso">
+        <div class="caso-name">Toroto</div>
+        <div class="caso-desc">Diversificación de actividades de captura de carbono. Activo.</div>
+      </div>
+      <div class="caso">
+        <div class="caso-name">Turenscape · EACC</div>
+        <div class="caso-desc">Producción editorial y rigor metodológico en urbanismo regenerativo.</div>
+      </div>
+      <div class="caso">
+        <div class="caso-name">CenterPoint</div>
+        <div class="caso-desc">Infraestructura M&A en Notion.</div>
+      </div>
+      <div class="caso">
+        <div class="caso-name">Cultivo</div>
+        <div class="caso-desc">Sistemas operativos para agroindustria mexicana.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">De dónde vengo</div>
+    <h2>Cruce raro entre finanzas, sustentabilidad y sistemas.</h2>
+    <div class="bio">
+      <div class="bio-block">
+        <h4>Background</h4>
+        <ul>
+          <li>Per Capital, Konfio, Kavak: financial ops, M&A, modelos.</li>
+          <li>Cultivo: agroindustria, operación en campo.</li>
+          <li>2 años construyendo sistemas con IA para empresas latinoamericanas.</li>
+        </ul>
+      </div>
+      <div class="bio-block">
+        <h4>Cómo trabajo</h4>
+        <p>Diagnóstico primero, implementación después. Equipo pequeño, ciclos cortos, transparencia de costo. No vendo "transformación digital". Resuelvo el siguiente problema operativo concreto que tienes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="section-label">Hablemos</div>
+    <h2>Si algo de lo anterior te suena, mándame un correo.</h2>
+    <p class="lede">30 minutos por video. Sin pitch, sin slides. Te escucho, te digo si te puedo ayudar o no, te conecto con alguien más si no soy yo.</p>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:pedro.rojas.campuzano@gmail.com?subject=Conversaci%C3%B3n%20de%2030%20min%20%C2%B7%20FSC%2FEcocert">
+        <div class="label">Correo directo</div>
+        <div class="value">pedro.rojas.campuzano@gmail.com</div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/pedrorojascampuzano/" target="_blank" rel="noopener">
+        <div class="label">LinkedIn</div>
+        <div class="value">/in/pedrorojascampuzano</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div>Pedro Rojas Consulting · Ciudad de México</div>
+    <div>Conocido en evento FSC · Ecocert · 21.05.2026</div>
+  </footer>
+
+</div>
+</body>
+</html>
